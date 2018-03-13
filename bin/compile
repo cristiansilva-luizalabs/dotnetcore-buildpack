@@ -49,7 +49,8 @@ dotnet publish $PROJECT_FILE --output ${BUILD_DIR}/heroku_output --configuration
 echo "Diretorio publish ${BUILD_DIR}"
 echo "Diretorio home ${HOME}"
 
-exec_migrations
+echo "Executando migracoes"
+dotnet ef database upgrade
 
 cat << EOT >> ${BUILD_DIR}/Procfile
 web: ASPNETCORE_URLS='http://+:5000' dotnet ef database update dotnet "./${PROJECT_NAME}.dll"

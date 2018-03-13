@@ -89,9 +89,3 @@ export_env_dir() {
     fi
   fi
 }
-
-exec_migrations(){
-   echo "Executando migrações"
-   cd "$HOME/heroku_output"
-   dotnet ef database upgrade
-}
