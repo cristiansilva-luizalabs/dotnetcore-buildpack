@@ -53,7 +53,9 @@ dotnet publish $PROJECT_FILE --output ${BUILD_DIR}/heroku_output --configuration
 echo "Diretorio publish ${BUILD_DIR}"
 echo "Diretorio home ${HOME}"
 
+echo "Lerry"
+
 
 cat << EOT >> ${BUILD_DIR}/Procfile
-web: cd \$HOME/heroku_output && ASPNETCORE_URLS='http://+:80' dotnet "./${PROJECT_NAME}.dll"
+#web: cd \$HOME/heroku_output && ASPNETCORE_URLS='http://+:80' dotnet "./${PROJECT_NAME}.dll"
 EOT
