@@ -46,9 +46,9 @@ fi
 echo "publish ${PROJECT_FILE}"
 dotnet publish $PROJECT_FILE --output ${BUILD_DIR}/heroku_output --configuration Release --runtime linux-x64
 
-echo "Executando migrações no BD"
-cd ${BUILD_DIR}/${PROJECT_NAME}
-dotnet ef database update
+#echo "Executando migrações no BD"
+#cd ${BUILD_DIR}/${PROJECT_NAME}
+#dotnet ef database update
 
 echo "Diretorio publish ${BUILD_DIR}"
 echo "Diretorio home ${HOME}"
