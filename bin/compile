@@ -57,5 +57,5 @@ echo "Lerry"
 
 
 cat << EOT >> ${BUILD_DIR}/Procfile
-#web: cd \$HOME/heroku_output && ASPNETCORE_URLS='http://+:80' dotnet "./${PROJECT_NAME}.dll"
+#web: cd \$HOME/heroku_output && ASPNETCORE_URLS='http://+:5000' dotnet "./${PROJECT_NAME}.dll"
 EOT
